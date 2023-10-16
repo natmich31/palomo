@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ordenar Números</title>
+</head>
+<body><center>
+    <h1>Ordenar Números de Menor a Mayor</h1>
+
+    <p>Por favor, ingresa tres números:</p>
+    
+    <input type="number" id="numero1" placeholder="Número 1">
+    <input type="number" id="numero2" placeholder="Número 2">
+    <input type="number" id="numero3" placeholder="Número 3">
+
+    <button onclick="ordenarNumeros()">Ordenar</button>
+
+    <p>Resultado:</p>
+    <p id="resultado"></p>
+
+    <script>
+        function ordenarNumeros() {
+            // Obtener los valores de los tres números
+            var num1 = parseFloat(document.getElementById("numero1").value);
+            var num2 = parseFloat(document.getElementById("numero2").value);
+            var num3 = parseFloat(document.getElementById("numero3").value);
+
+            // Crear un array y ordenarlo de menor a mayor
+            var numeros = [num1, num2, num3];
+            numeros.sort(function(a, b) {
+                return a - b;
+            });
+
+            // Mostrar el resultado en pantalla
+            document.getElementById("resultado").innerHTML = "Ordenados de menor a mayor: " + numeros.join(", ");
+        }
+    </script>
+    </center>
+</body>
+</html>

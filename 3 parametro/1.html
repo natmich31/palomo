@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uno</title>
+</head>
+<body>
+<script>
+    function com(n1,n2){
+        if(n1==n2){
+        document.write("Son iguales");
+    }else if(n1<n2){
+        document.write(+n2+" es mayor a "+n1 );
+    }else if(n1>n2){
+        document.write(+n1+" es mayor a "+n2 );
+    }else{
+        document.write("Error");
+    }
+}
+    function comp(){
+    const num1=parseFloat(prompt("Introduce valor uno"));
+const num2=parseFloat(prompt("Introduce valor dos"));
+com(num1,num2);
+    }
+
+comp();
+</script>
+</body>
+</html>

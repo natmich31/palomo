@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Verificar Número Primo</title>
+</head>
+<body><center>
+<h1>Verificar si un número es primo</h1>
+<form>
+<label for="numero">Ingrese un número: </label>
+<input type="number" id="numero" name="numero"><br>
+<input type="button" value="Verificar" onclick="verificarPrimo()">
+</form>
+<p id="resultado"></p>
+<script> function verificarPrimo() { var numero = parseInt(document.getElementById("numero").value); if (isNaN(numero) || numero <= 1) { document.getElementById("resultado").textContent = "Por favor, ingrese un número válido mayor que 1."; } else { var esPrimo = true; for (var i = 2; i <= Math.sqrt(numero); i++) { if (numero % i === 0) { esPrimo = false; break; } } if (esPrimo) { document.getElementById("resultado").textContent = numero + " es un número primo."; } else { document.getElementById("resultado").textContent = numero + " no es un número primo."; } } } </script>
+</center>
+</body>
+</html>

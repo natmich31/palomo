@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Detector de Cuadrantes</title>
+<body><center>
+   <h1>Detector de Cuadrantes</h1>
+   <p>Ingresa las coordenadas del punto:</p>
+   <label for="x">Valor de x:</label>
+   <input type="number" id="x">
+   <br>
+   <label for="y">Valor de y:</label>
+   <input type="number" id="y">
+   <br>
+   <button onclick="detectarCuadrante()">Detectar Cuadrante</button>
+   <p id="resultado"></p>
+<script> function detectarCuadrante() {
+     // Obtener los valores de x e y ingresados por el usuario
+      var x = parseInt(document.getElementById("x").value); 
+      var y = parseInt(document.getElementById("y").value); 
+      // Verificar en qué cuadrante se encuentra el punto 
+      if (x > 0 && y > 0) {
+         document.getElementById("resultado").textContent = "El punto se encuentra en el primer cuadrante."; } 
+         else if (x < 0 && y > 0) { 
+            document.getElementById("resultado").textContent = "El punto se encuentra en el segundo cuadrante."; } 
+            else if (x < 0 && y < 0) {
+                 document.getElementById("resultado").textContent = "El punto se encuentra en el tercer cuadrante."; }
+                  else if (x > 0 && y < 0) { document.getElementById("resultado").textContent = "El punto se encuentra en el cuarto cuadrante."; } 
+                  else { document.getElementById("resultado").textContent = "El punto se encuentra en un eje o en el origen."; } } 
+                  </script>
+</head>
+
+</body>
+</center>
+</html>

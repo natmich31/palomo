@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Comparar Números</title>
+</head>
+<body><center>
+<h1>"Comparar dos números"</h1>
+<form>
+<label for="numero1">InTRUCE el primer número: </label>
+<input type="number" id="numero1" name="numero1"><br>
+<label for="numero2">Ingrese el segundo número: </label>
+<input type="number" id="numero2" name="numero2"><br>
+<input type="button" value="Comparar" onclick="compararNumeros()">
+</form>
+<p id="resultado"></p>
+<script> function compararNumeros() { var numero1 = parseFloat(document.getElementById("numero1").value); var numero2 = parseFloat(document.getElementById("numero2").value); if (isNaN(numero1) || isNaN(numero2)) { document.getElementById("resultado").textContent = "Por favor, ingrese números válidos."; } else if (numero1 === numero2) { document.getElementById("resultado").textContent = "Los números son iguales."; } else if (numero1 > numero2) { document.getElementById("resultado").textContent = "El primer número es mayor."; } else { document.getElementById("resultado").textContent = "El segundo número es mayor."; } } </script>
+</center>
+</body>
+</html>

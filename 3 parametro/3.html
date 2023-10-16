@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8</title>
+</head>
+<body>
+    <script>
+         function com(x,y){
+            if(x==0&&y==0)
+        document.write("origen");
+        if(x==0)
+        document.write("eje y");
+        if(y==0)
+        document.write("eje x");
+        if(x>0 && y>0)
+        document.write("cuadrante I");
+        if(x<0 && y>0)
+        document.write("Cuadrante II");
+        if(x<0 && y<0)
+        document.write("cuadrante III");
+        if(x>0 && y<0)
+        document.write("cuadrante VI");
+       
+}
+    function comp(){
+        let x=parseFloat(prompt("Introduce la coordenada x:"));
+        let y=parseFloat(prompt("Introduce la coordenada y:"));
+
+com(x,y);
+    }
+
+comp();
+
+
+    </script>
+</body>
+</html>
